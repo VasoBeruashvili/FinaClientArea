@@ -1,0 +1,60 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html ng-app="privateCabinet">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FINA | პირადი სივრცე</title>
+
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/ui-bootstrap-tpls-0.13.1.min.js"></script>
+    <link href="~/Content/hint.min.css" rel="stylesheet" />
+    <link href="~/Content/styles.css" rel="stylesheet" />
+    <link href="~/Content/angular-grid.css" rel="stylesheet" />
+    <script src="~/Scripts/angular-grid.js"></script>
+    <link href="~/Content/theme-fresh.css" rel="stylesheet" />
+    <link href="~/Content/jquery.clear.input.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.clear.input.js"></script>
+    <script src="~/Scripts/app.js"></script>
+</head>
+<body ng-controller="licensesController" data-ng-init="init()">
+    <nav class="navbar navbar-fixed-top topFixedNavbar">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="http://localhost:2086/Home/Index" style="margin-top: -10px;"><img src="../../Content/Resources/fina_logo_white.png" height="40" /></a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="phone">(+995 32) 219-70-00</li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right rightNavbar">
+                        <li class="contragentInfo">{{contragentName}}</li>
+                        <li class="logoutImage hint--right" data-hint="გასვლა" ng-click="LogoutContragent()"><img src="../../Content/Resources/logout.png" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="smartNavigation">
+        <div class="container" style="padding-top: 5px;">
+            <ul style="list-style: none; color: #5d9fca; margin-left: -35px;">
+                <li style="vertical-align: middle; float: left;"><a href="http://localhost:2086/Home/Index" class="ptr">მთავარი</a></li>
+                <li><img src="../../Content/Resources/arrowRight.png" style="margin-right: 2px; margin-left: 6px;" /><span class="smartNavCurrentItem crnt">ლიცენზიები</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container" id="angGridContainer" style="height: 82%">
+        <input class="clearable" type="text" ng-model="gridOptions.quickFilterText" autofocus placeholder="ძებნა..." style="margin-top: 20px;" />
+        <div ag-grid="gridOptions" class="ag-fresh" style="height: 100%; z-index: 0; width: auto; margin-top: 5px;"></div>
+    </div>
+    <div class="container-fluid pageFooter">
+        <div class="container">
+            <span style="float: right;">&copy;2011-@DateTime.Now.Year FINA Ltd</span>
+        </div>
+    </div>
+</body>
+</html>

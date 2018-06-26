@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/styles.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            vertical-align: top;
+            background-color: #f3f3f3;
+        }
+
+        html {overflow-x:hidden;}
+        body {margin:0;padding:0;}
+
+        #footer_container {
+            
+            border: 1px solid #666;
+            bottom: 0;
+            position: fixed;
+            height: 45px;
+            width: 100%;
+        }
+
+        #reg_form {
+            position: relative;
+            margin: 0 auto;
+            padding: 10px;
+            width: 285px;
+            height: 120px;
+            display: table;
+            background-color: #fff;
+            /*border-radius: 8px;*/
+
+            position:relative;    
+               
+            -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+            
+        }
+
+        #reg_form:hover{
+                -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        }
+
+            #reg_form:before, #reg_form:after {
+                content:"";
+                position:absolute; 
+                z-index:-1;
+                -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+                box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+                top:0;
+                bottom:0;
+                left:10px;
+                right:10px;
+                -moz-border-radius:100px / 10px;
+                border-radius:100px / 10px;
+            }
+
+            #reg_form:after {
+                right:10px; 
+            left:auto;
+            -webkit-transform:skew(8deg) rotate(3deg); 
+               -moz-transform:skew(8deg) rotate(3deg);     
+                -ms-transform:skew(8deg) rotate(3deg);     
+                 -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+            }
+
+        #regtable {
+            /*width: 280px;*/
+            height: 115px;
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        #login {
+            background-color: #a5a5a5;
+            top: 50%;
+            left: 50%;
+            width: 250px;
+            height: 200px;
+            margin-left: -125px;
+            margin-top: -100px;
+            text-align: center;
+            border: 3px solid #000;
+            border-radius: 20px;
+        }
+
+        #auth ul li {
+            display: inline-block;
+            color: #800101;
+            padding-right: 10px;
+            margin-left: 10px;
+        }
+
+        #auth span {
+            padding: 5px;
+        }
+
+        #loginbtn {
+            font-size: 14px;
+            height: 30px;
+            background-color: #49b8e9;
+            border: none;
+            /*border-radius: 2px;*/
+            color: #fff;
+            width: 145px;
+        }
+
+        #loginbtn:hover {
+            font-size: 14px;
+            height: 30px;
+            background-color: #28a5dc;
+            border: none;
+            /*border-radius: 2px;*/
+            color: #fff;
+            cursor: pointer;
+
+            -webkit-transition: background-color 500ms linear;
+            -moz-transition: background-color 500ms linear;
+            -o-transition: background-color 500ms linear;
+            transition: background-color 500ms linear;
+        }
+
+        
+        .outer {
+            display: table;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+        .middle {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .inner {
+            margin-left: auto;
+            margin-right: auto; 
+
+        }
+    </style>  
+    <title>FINA | პირადი სივრცე</title>
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top topFixedNavbar topFixedNavbarShadow">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="http://localhost:2086/" style="margin-top: -10px;"><img src="../../Content/Resources/fina_logo_white.png" height="40" /></a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="phone">(+995 32) 219-70-00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav> 
+
+    <div class="outer">
+<div class="middle">
+<div class="inner">
+    <div id="reg_form">
+        <form action="/Login/Login" method="post">
+            @Html.Hidden("returnUrl", this.Request.RawUrl)
+            <table id="regtable">
+                <tr>
+                    <td style="text-align: right;">
+                        <label for="name" style="color: #222; font-weight: normal;">შესვლის სახელი:</label></td>
+                    <td>
+                        <input name="UserName" id="name" type="text" style="width: 145px; margin-left: 5px;"/></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">
+                        <label for="password" style="color: #222; font-weight: normal;">პაროლი:</label>
+                    </td>
+                    <td>
+                        <input name="Password" id="password" type="password"  style="width: 145px; margin-left: 5px;"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align: right; padding-top:5px;">
+                        <input type="submit" name="submit" value="შესვლა" formaction="/Login/Login" id="loginbtn" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <span style="color: red; font-size: small">@ViewBag.ValidateUserMessage &nbsp;</span>
+
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+    </div>
+</div>
+</div>
+
+    <div class="container-fluid pageFooter">
+        <div class="container">
+            <span style="float: right;">&copy;2011-@DateTime.Now.Year FINA Ltd</span>
+        </div>
+    </div>
+</body>
+</html>

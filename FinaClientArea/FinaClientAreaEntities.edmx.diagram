@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="50bb755f05c4410f9084c955eb60445e" Name="Diagram1" ZoomLevel="88">
+        <EntityTypeShape EntityType="ipm11_2011_62Model.Contragents" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ipm11_2011_62Model.CRMIncidentTypes" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ipm11_2011_62Model.Products" Width="1.5" PointX="0.75" PointY="19.375" />
+        <EntityTypeShape EntityType="ipm11_2011_62Model.CRMIncidents" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ipm11_2011_62Model.GeneralDocs" Width="1.5" PointX="0.75" PointY="1.625" />
+        <EntityTypeShape EntityType="ipm11_2011_62Model.ProductsFlow" Width="1.5" PointX="3" PointY="1.25" />
+        <AssociationConnector Association="ipm11_2011_62Model.FK__ProductsF__produ__2FC4F8E9" />
+        <AssociationConnector Association="ipm11_2011_62Model.FK__ProductsF__gener__30B91D22" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

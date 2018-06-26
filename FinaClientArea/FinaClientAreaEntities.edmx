@@ -1,0 +1,755 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ipm11_2011_62Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Contragents">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="group_id" Type="int" />
+          <Property Name="path" Type="nvarchar" MaxLength="300" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="short_name" Type="nvarchar" MaxLength="200" />
+          <Property Name="code" Type="nvarchar" MaxLength="50" />
+          <Property Name="tel" Type="nvarchar" MaxLength="50" />
+          <Property Name="address" Type="nvarchar" MaxLength="200" />
+          <Property Name="vat" Type="bit" />
+          <Property Name="comment" Type="nvarchar" MaxLength="200" />
+          <Property Name="acc_use" Type="int" />
+          <Property Name="type" Type="int" />
+          <Property Name="person" Type="nvarchar" MaxLength="50" />
+          <Property Name="driver_num" Type="nvarchar" MaxLength="15" />
+          <Property Name="car_model" Type="nvarchar" MaxLength="50" />
+          <Property Name="car_num" Type="nvarchar" MaxLength="50" />
+          <Property Name="is_hidden" Type="tinyint" />
+          <Property Name="advance_type" Type="tinyint" />
+          <Property Name="vat_type" Type="int" />
+          <Property Name="pay_items" Type="tinyint" />
+          <Property Name="is_resident" Type="tinyint" />
+          <Property Name="account" Type="nvarchar" MaxLength="50" />
+          <Property Name="account2" Type="nvarchar" MaxLength="50" />
+          <Property Name="tax" Type="float" />
+          <Property Name="min_tax" Type="float" />
+          <Property Name="country_id" Type="int" />
+          <Property Name="birth_date" Type="datetime" Nullable="false" />
+          <Property Name="e_mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="client_id" Type="int" Nullable="false" />
+          <Property Name="cons_period" Type="int" Nullable="false" />
+          <Property Name="create_user_id" Type="int" Nullable="false" />
+          <Property Name="create_date" Type="datetime" Nullable="false" />
+          <Property Name="limit_type" Type="int" Nullable="false" />
+          <Property Name="limit_val" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="usr_column_501" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="CRMIncidentTypes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="group_id" Type="int" />
+          <Property Name="path" Type="varchar" MaxLength="300" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="code" Type="nvarchar" MaxLength="50" />
+          <Property Name="unit_id" Type="int" />
+          <Property Name="report_unit_id" Type="int" />
+          <Property Name="default_unit_id" Type="int" />
+          <Property Name="price" Type="float" />
+          <Property Name="comment" Type="nvarchar" MaxLength="500" />
+          <Property Name="weight" Type="float" />
+          <Property Name="volume" Type="float" />
+          <Property Name="excise" Type="float" />
+          <Property Name="excise_amount" Type="float" />
+          <Property Name="country_id" Type="int" />
+          <Property Name="partnumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="acc_use" Type="int" />
+          <Property Name="vat" Type="bit" />
+          <Property Name="vat_type" Type="int" />
+          <Property Name="min_Quantity" Type="varchar" MaxLength="20" />
+          <Property Name="rest_quantity" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="type" Type="tinyint" />
+          <Property Name="out_type" Type="tinyint" />
+          <Property Name="amortization" Type="float" />
+          <Property Name="fin_amortization_type" Type="tinyint" />
+          <Property Name="amortization_type" Type="tinyint" />
+          <Property Name="is_hidden" Type="tinyint" />
+          <Property Name="is_web_visible" Type="tinyint" />
+          <Property Name="plu_code" Type="int" />
+          <Property Name="is_weight" Type="int" />
+          <Property Name="parent_id" Type="int" />
+          <Property Name="term" Type="int" />
+          <Property Name="uid" Type="varchar" MaxLength="70" />
+          <Property Name="sync_status" Type="tinyint" />
+          <Property Name="staff_seller" Type="float" />
+          <Property Name="inventory_group_id" Type="int" />
+          <Property Name="liquidate_value" Type="float" />
+          <Property Name="service_term" Type="int" />
+          <Property Name="use_production" Type="tinyint" />
+          <Property Name="inventory_start_date" Type="datetime" />
+          <Property Name="fin_service_term" Type="float" />
+          <Property Name="fin_inventory_start_date" Type="datetime" />
+          <Property Name="fin_amortization" Type="float" />
+          <Property Name="staff_salary_type" Type="int" />
+          <Property Name="series" Type="nvarchar" MaxLength="50" />
+          <Property Name="expire_date" Type="date" />
+          <Property Name="in_date" Type="datetime" />
+          <Property Name="small_inventory" Type="bit" />
+          <Property Name="duration" Type="int" Nullable="false" />
+          <Property Name="process_type" Type="int" Nullable="false" />
+          <Property Name="med_type" Type="int" Nullable="false" />
+          <Property Name="client_id" Type="int" Nullable="false" />
+          <Property Name="order_by" Type="int" Nullable="false" />
+          <Property Name="no_auto_production" Type="tinyint" />
+          <Property Name="create_user_id" Type="int" Nullable="false" />
+          <Property Name="create_date" Type="datetime" Nullable="false" />
+          <Property Name="generic_name" Type="nvarchar" MaxLength="200" />
+          <Property Name="replace_name" Type="nvarchar" MaxLength="200" />
+          <Property Name="manufacturer" Type="nvarchar" MaxLength="200" />
+          <Property Name="is_recipe" Type="nvarchar" MaxLength="100" />
+          <Property Name="max_Quantity" Type="varchar" MaxLength="20" />
+          <Property Name="rs_code_type" Type="tinyint" Nullable="false" />
+          <Property Name="special_unit_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CRMIncidents">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="general_id" Type="int" Nullable="false" />
+          <Property Name="start_date" Type="datetime" Nullable="false" />
+          <Property Name="estimate_date" Type="datetime" Nullable="false" />
+          <Property Name="end_date" Type="datetime" />
+          <Property Name="priority" Type="int" Nullable="false" />
+          <Property Name="incident_type" Type="int" Nullable="false" />
+          <Property Name="comment" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="status_comment" Type="nvarchar(max)" />
+          <Property Name="progres_percent" Type="int" />
+          <Property Name="contact_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GeneralDocs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tdate" Type="datetime" />
+          <Property Name="doc_num" Type="bigint" />
+          <Property Name="doc_num_prefix" Type="nvarchar" MaxLength="20" />
+          <Property Name="doc_type" Type="int" />
+          <Property Name="purpose" Type="nvarchar" MaxLength="750" />
+          <Property Name="amount" Type="float" />
+          <Property Name="currency_id" Type="int" />
+          <Property Name="rate" Type="float" />
+          <Property Name="vat" Type="float" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="ref_id" Type="int" />
+          <Property Name="param_id1" Type="int" />
+          <Property Name="param_id2" Type="int" />
+          <Property Name="status_id" Type="int" />
+          <Property Name="make_entry" Type="bit" />
+          <Property Name="project_id" Type="int" />
+          <Property Name="uid" Type="varchar" MaxLength="70" />
+          <Property Name="sync_status" Type="tinyint" />
+          <Property Name="waybill_num" Type="nvarchar" MaxLength="50" />
+          <Property Name="store_id" Type="int" />
+          <Property Name="analytic_code" Type="int" />
+          <Property Name="amount2" Type="float" />
+          <Property Name="contragent_sub_id" Type="int" />
+          <Property Name="contragent_id" Type="int" />
+          <Property Name="is_blocked" Type="bit" />
+          <Property Name="is_packed" Type="bit" />
+          <Property Name="is_deleted" Type="bit" />
+          <Property Name="delete_user_id" Type="int" />
+          <Property Name="delete_date" Type="datetime" />
+          <Property Name="create_date" Type="datetime" Nullable="false" />
+          <Property Name="house_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductsFlow">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="product_id" Type="int" Nullable="false" />
+          <Property Name="product_tree_path" Type="varchar" MaxLength="300" />
+          <Property Name="general_id" Type="int" Nullable="false" />
+          <Property Name="amount" Type="float" />
+          <Property Name="price" Type="float" />
+          <Property Name="store_id" Type="int" />
+          <Property Name="vat_percent" Type="decimal" Precision="6" Scale="3" />
+          <Property Name="self_cost" Type="float" />
+          <Property Name="coeff" Type="int" />
+          <Property Name="is_order" Type="tinyint" />
+          <Property Name="is_expense" Type="tinyint" />
+          <Property Name="is_move" Type="tinyint" />
+          <Property Name="visible" Type="tinyint" />
+          <Property Name="parent_product_id" Type="int" />
+          <Property Name="ref_id" Type="int" />
+          <Property Name="unit_id" Type="int" />
+          <Property Name="comment" Type="nvarchar" MaxLength="50" />
+          <Property Name="discount_percent" Type="float" />
+          <Property Name="discount_value" Type="float" />
+          <Property Name="original_price" Type="float" />
+          <Property Name="in_id" Type="int" />
+          <Property Name="vendor_id" Type="int" />
+          <Property Name="cafe_status" Type="tinyint" />
+          <Property Name="out_id" Type="int" />
+          <Property Name="sub_id" Type="int" />
+          <Property Name="service_product_id" Type="int" />
+          <Property Name="uid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="service_staff_id" Type="int" />
+          <Property Name="staff_salary" Type="float" />
+          <Property Name="product_bonus" Type="float" />
+          <Property Name="cafe_comment" Type="varchar" MaxLength="100" />
+          <Property Name="cafe_send_date" Type="datetime" />
+          <Property Name="ref_uid" Type="varchar" MaxLength="50" />
+          <Property Name="excise" Type="float" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__ProductsF__gener__30B91D22">
+          <End Role="GeneralDocs" Type="Self.GeneralDocs" Multiplicity="1" />
+          <End Role="ProductsFlow" Type="Self.ProductsFlow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GeneralDocs">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ProductsFlow">
+              <PropertyRef Name="general_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProductsF__produ__2FC4F8E9">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="ProductsFlow" Type="Self.ProductsFlow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ProductsFlow">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ipm11_2011_62ModelStoreContainer">
+          <EntitySet Name="Contragents" EntityType="Self.Contragents" Schema="book" store:Type="Tables" />
+          <EntitySet Name="CRMIncidentTypes" EntityType="Self.CRMIncidentTypes" Schema="book" store:Type="Tables" />
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="book" store:Type="Tables" />
+          <EntitySet Name="CRMIncidents" EntityType="Self.CRMIncidents" Schema="doc" store:Type="Tables" />
+          <EntitySet Name="GeneralDocs" EntityType="Self.GeneralDocs" Schema="doc" store:Type="Tables" />
+          <EntitySet Name="ProductsFlow" EntityType="Self.ProductsFlow" Schema="doc" store:Type="Tables" />
+          <AssociationSet Name="FK__ProductsF__gener__30B91D22" Association="Self.FK__ProductsF__gener__30B91D22">
+            <End Role="GeneralDocs" EntitySet="GeneralDocs" />
+            <End Role="ProductsFlow" EntitySet="ProductsFlow" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProductsF__produ__2FC4F8E9" Association="Self.FK__ProductsF__produ__2FC4F8E9">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ProductsFlow" EntitySet="ProductsFlow" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ipm11_2011_62Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="FinaClientAreaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Contragents" EntityType="ipm11_2011_62Model.Contragents" />
+          <EntitySet Name="CRMIncidentTypes" EntityType="ipm11_2011_62Model.CRMIncidentTypes" />
+          <EntitySet Name="Products" EntityType="ipm11_2011_62Model.Products" />
+          <EntitySet Name="CRMIncidents" EntityType="ipm11_2011_62Model.CRMIncidents" />
+          <EntitySet Name="GeneralDocs" EntityType="ipm11_2011_62Model.GeneralDocs" />
+          <EntitySet Name="ProductsFlow" EntityType="ipm11_2011_62Model.ProductsFlow" />
+          <AssociationSet Name="FK__ProductsF__produ__2FC4F8E9" Association="ipm11_2011_62Model.FK__ProductsF__produ__2FC4F8E9">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ProductsFlow" EntitySet="ProductsFlow" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProductsF__gener__30B91D22" Association="ipm11_2011_62Model.FK__ProductsF__gener__30B91D22">
+            <End Role="GeneralDocs" EntitySet="GeneralDocs" />
+            <End Role="ProductsFlow" EntitySet="ProductsFlow" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Contragents">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="group_id" Type="Int32" />
+          <Property Name="path" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="short_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="vat" Type="Boolean" />
+          <Property Name="comment" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="acc_use" Type="Int32" />
+          <Property Name="type" Type="Int32" />
+          <Property Name="person" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="driver_num" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="car_model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="car_num" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="is_hidden" Type="Byte" />
+          <Property Name="advance_type" Type="Byte" />
+          <Property Name="vat_type" Type="Int32" />
+          <Property Name="pay_items" Type="Byte" />
+          <Property Name="is_resident" Type="Byte" />
+          <Property Name="account" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="account2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tax" Type="Double" />
+          <Property Name="min_tax" Type="Double" />
+          <Property Name="country_id" Type="Int32" />
+          <Property Name="birth_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="e_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="client_id" Type="Int32" Nullable="false" />
+          <Property Name="cons_period" Type="Int32" Nullable="false" />
+          <Property Name="create_user_id" Type="Int32" Nullable="false" />
+          <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="limit_type" Type="Int32" Nullable="false" />
+          <Property Name="limit_val" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="usr_column_501" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CRMIncidentTypes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="group_id" Type="Int32" />
+          <Property Name="path" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="unit_id" Type="Int32" />
+          <Property Name="report_unit_id" Type="Int32" />
+          <Property Name="default_unit_id" Type="Int32" />
+          <Property Name="price" Type="Double" />
+          <Property Name="comment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="weight" Type="Double" />
+          <Property Name="volume" Type="Double" />
+          <Property Name="excise" Type="Double" />
+          <Property Name="excise_amount" Type="Double" />
+          <Property Name="country_id" Type="Int32" />
+          <Property Name="partnumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="acc_use" Type="Int32" />
+          <Property Name="vat" Type="Boolean" />
+          <Property Name="vat_type" Type="Int32" />
+          <Property Name="min_Quantity" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="rest_quantity" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="type" Type="Byte" />
+          <Property Name="out_type" Type="Byte" />
+          <Property Name="amortization" Type="Double" />
+          <Property Name="fin_amortization_type" Type="Byte" />
+          <Property Name="amortization_type" Type="Byte" />
+          <Property Name="is_hidden" Type="Byte" />
+          <Property Name="is_web_visible" Type="Byte" />
+          <Property Name="plu_code" Type="Int32" />
+          <Property Name="is_weight" Type="Int32" />
+          <Property Name="parent_id" Type="Int32" />
+          <Property Name="term" Type="Int32" />
+          <Property Name="uid" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="sync_status" Type="Byte" />
+          <Property Name="staff_seller" Type="Double" />
+          <Property Name="inventory_group_id" Type="Int32" />
+          <Property Name="liquidate_value" Type="Double" />
+          <Property Name="service_term" Type="Int32" />
+          <Property Name="use_production" Type="Byte" />
+          <Property Name="inventory_start_date" Type="DateTime" Precision="3" />
+          <Property Name="fin_service_term" Type="Double" />
+          <Property Name="fin_inventory_start_date" Type="DateTime" Precision="3" />
+          <Property Name="fin_amortization" Type="Double" />
+          <Property Name="staff_salary_type" Type="Int32" />
+          <Property Name="series" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="expire_date" Type="DateTime" Precision="0" />
+          <Property Name="in_date" Type="DateTime" Precision="3" />
+          <Property Name="small_inventory" Type="Boolean" />
+          <Property Name="duration" Type="Int32" Nullable="false" />
+          <Property Name="process_type" Type="Int32" Nullable="false" />
+          <Property Name="med_type" Type="Int32" Nullable="false" />
+          <Property Name="client_id" Type="Int32" Nullable="false" />
+          <Property Name="order_by" Type="Int32" Nullable="false" />
+          <Property Name="no_auto_production" Type="Byte" />
+          <Property Name="create_user_id" Type="Int32" Nullable="false" />
+          <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="generic_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="replace_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="manufacturer" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="is_recipe" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="max_Quantity" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="rs_code_type" Type="Byte" Nullable="false" />
+          <Property Name="special_unit_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ProductsFlow" Relationship="ipm11_2011_62Model.FK__ProductsF__produ__2FC4F8E9" FromRole="Products" ToRole="ProductsFlow" />
+        </EntityType>
+        <EntityType Name="CRMIncidents">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="general_id" Type="Int32" Nullable="false" />
+          <Property Name="start_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="estimate_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="end_date" Type="DateTime" Precision="3" />
+          <Property Name="priority" Type="Int32" Nullable="false" />
+          <Property Name="incident_type" Type="Int32" Nullable="false" />
+          <Property Name="comment" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="status_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="progres_percent" Type="Int32" />
+          <Property Name="contact_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GeneralDocs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tdate" Type="DateTime" Precision="3" />
+          <Property Name="doc_num" Type="Int64" />
+          <Property Name="doc_num_prefix" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="doc_type" Type="Int32" />
+          <Property Name="purpose" Type="String" MaxLength="750" FixedLength="false" Unicode="true" />
+          <Property Name="amount" Type="Double" />
+          <Property Name="currency_id" Type="Int32" />
+          <Property Name="rate" Type="Double" />
+          <Property Name="vat" Type="Double" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="ref_id" Type="Int32" />
+          <Property Name="param_id1" Type="Int32" />
+          <Property Name="param_id2" Type="Int32" />
+          <Property Name="status_id" Type="Int32" />
+          <Property Name="make_entry" Type="Boolean" />
+          <Property Name="project_id" Type="Int32" />
+          <Property Name="uid" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="sync_status" Type="Byte" />
+          <Property Name="waybill_num" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="store_id" Type="Int32" />
+          <Property Name="analytic_code" Type="Int32" />
+          <Property Name="amount2" Type="Double" />
+          <Property Name="contragent_sub_id" Type="Int32" />
+          <Property Name="contragent_id" Type="Int32" />
+          <Property Name="is_blocked" Type="Boolean" />
+          <Property Name="is_packed" Type="Boolean" />
+          <Property Name="is_deleted" Type="Boolean" />
+          <Property Name="delete_user_id" Type="Int32" />
+          <Property Name="delete_date" Type="DateTime" Precision="3" />
+          <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="house_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ProductsFlow" Relationship="ipm11_2011_62Model.FK__ProductsF__gener__30B91D22" FromRole="GeneralDocs" ToRole="ProductsFlow" />
+        </EntityType>
+        <EntityType Name="ProductsFlow">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="product_id" Type="Int32" Nullable="false" />
+          <Property Name="product_tree_path" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="general_id" Type="Int32" Nullable="false" />
+          <Property Name="amount" Type="Double" />
+          <Property Name="price" Type="Double" />
+          <Property Name="store_id" Type="Int32" />
+          <Property Name="vat_percent" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="self_cost" Type="Double" />
+          <Property Name="coeff" Type="Int32" />
+          <Property Name="is_order" Type="Byte" />
+          <Property Name="is_expense" Type="Byte" />
+          <Property Name="is_move" Type="Byte" />
+          <Property Name="visible" Type="Byte" />
+          <Property Name="parent_product_id" Type="Int32" />
+          <Property Name="ref_id" Type="Int32" />
+          <Property Name="unit_id" Type="Int32" />
+          <Property Name="comment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="discount_percent" Type="Double" />
+          <Property Name="discount_value" Type="Double" />
+          <Property Name="original_price" Type="Double" />
+          <Property Name="in_id" Type="Int32" />
+          <Property Name="vendor_id" Type="Int32" />
+          <Property Name="cafe_status" Type="Byte" />
+          <Property Name="out_id" Type="Int32" />
+          <Property Name="sub_id" Type="Int32" />
+          <Property Name="service_product_id" Type="Int32" />
+          <Property Name="uid" Type="Guid" Nullable="false" />
+          <Property Name="service_staff_id" Type="Int32" />
+          <Property Name="staff_salary" Type="Double" />
+          <Property Name="product_bonus" Type="Double" />
+          <Property Name="cafe_comment" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="cafe_send_date" Type="DateTime" Precision="3" />
+          <Property Name="ref_uid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="excise" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Products" Relationship="ipm11_2011_62Model.FK__ProductsF__produ__2FC4F8E9" FromRole="ProductsFlow" ToRole="Products" />
+          <NavigationProperty Name="GeneralDocs" Relationship="ipm11_2011_62Model.FK__ProductsF__gener__30B91D22" FromRole="ProductsFlow" ToRole="GeneralDocs" />
+        </EntityType>
+        <Association Name="FK__ProductsF__produ__2FC4F8E9">
+          <End Type="ipm11_2011_62Model.Products" Role="Products" Multiplicity="1" />
+          <End Type="ipm11_2011_62Model.ProductsFlow" Role="ProductsFlow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ProductsFlow">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProductsF__gener__30B91D22">
+          <End Type="ipm11_2011_62Model.GeneralDocs" Role="GeneralDocs" Multiplicity="1" />
+          <End Type="ipm11_2011_62Model.ProductsFlow" Role="ProductsFlow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GeneralDocs">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ProductsFlow">
+              <PropertyRef Name="general_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ipm11_2011_62ModelStoreContainer" CdmEntityContainer="FinaClientAreaEntities">
+          <EntitySetMapping Name="Contragents">
+            <EntityTypeMapping TypeName="ipm11_2011_62Model.Contragents">
+              <MappingFragment StoreEntitySet="Contragents">
+                <ScalarProperty Name="usr_column_501" ColumnName="usr_column_501" />
+                <ScalarProperty Name="limit_val" ColumnName="limit_val" />
+                <ScalarProperty Name="limit_type" ColumnName="limit_type" />
+                <ScalarProperty Name="create_date" ColumnName="create_date" />
+                <ScalarProperty Name="create_user_id" ColumnName="create_user_id" />
+                <ScalarProperty Name="cons_period" ColumnName="cons_period" />
+                <ScalarProperty Name="client_id" ColumnName="client_id" />
+                <ScalarProperty Name="e_mail" ColumnName="e_mail" />
+                <ScalarProperty Name="birth_date" ColumnName="birth_date" />
+                <ScalarProperty Name="country_id" ColumnName="country_id" />
+                <ScalarProperty Name="min_tax" ColumnName="min_tax" />
+                <ScalarProperty Name="tax" ColumnName="tax" />
+                <ScalarProperty Name="account2" ColumnName="account2" />
+                <ScalarProperty Name="account" ColumnName="account" />
+                <ScalarProperty Name="is_resident" ColumnName="is_resident" />
+                <ScalarProperty Name="pay_items" ColumnName="pay_items" />
+                <ScalarProperty Name="vat_type" ColumnName="vat_type" />
+                <ScalarProperty Name="advance_type" ColumnName="advance_type" />
+                <ScalarProperty Name="is_hidden" ColumnName="is_hidden" />
+                <ScalarProperty Name="car_num" ColumnName="car_num" />
+                <ScalarProperty Name="car_model" ColumnName="car_model" />
+                <ScalarProperty Name="driver_num" ColumnName="driver_num" />
+                <ScalarProperty Name="person" ColumnName="person" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="acc_use" ColumnName="acc_use" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="vat" ColumnName="vat" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="short_name" ColumnName="short_name" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="group_id" ColumnName="group_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CRMIncidentTypes">
+            <EntityTypeMapping TypeName="ipm11_2011_62Model.CRMIncidentTypes">
+              <MappingFragment StoreEntitySet="CRMIncidentTypes">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="ipm11_2011_62Model.Products">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="special_unit_id" ColumnName="special_unit_id" />
+                <ScalarProperty Name="rs_code_type" ColumnName="rs_code_type" />
+                <ScalarProperty Name="max_Quantity" ColumnName="max_Quantity" />
+                <ScalarProperty Name="is_recipe" ColumnName="is_recipe" />
+                <ScalarProperty Name="manufacturer" ColumnName="manufacturer" />
+                <ScalarProperty Name="replace_name" ColumnName="replace_name" />
+                <ScalarProperty Name="generic_name" ColumnName="generic_name" />
+                <ScalarProperty Name="create_date" ColumnName="create_date" />
+                <ScalarProperty Name="create_user_id" ColumnName="create_user_id" />
+                <ScalarProperty Name="no_auto_production" ColumnName="no_auto_production" />
+                <ScalarProperty Name="order_by" ColumnName="order_by" />
+                <ScalarProperty Name="client_id" ColumnName="client_id" />
+                <ScalarProperty Name="med_type" ColumnName="med_type" />
+                <ScalarProperty Name="process_type" ColumnName="process_type" />
+                <ScalarProperty Name="duration" ColumnName="duration" />
+                <ScalarProperty Name="small_inventory" ColumnName="small_inventory" />
+                <ScalarProperty Name="in_date" ColumnName="in_date" />
+                <ScalarProperty Name="expire_date" ColumnName="expire_date" />
+                <ScalarProperty Name="series" ColumnName="series" />
+                <ScalarProperty Name="staff_salary_type" ColumnName="staff_salary_type" />
+                <ScalarProperty Name="fin_amortization" ColumnName="fin_amortization" />
+                <ScalarProperty Name="fin_inventory_start_date" ColumnName="fin_inventory_start_date" />
+                <ScalarProperty Name="fin_service_term" ColumnName="fin_service_term" />
+                <ScalarProperty Name="inventory_start_date" ColumnName="inventory_start_date" />
+                <ScalarProperty Name="use_production" ColumnName="use_production" />
+                <ScalarProperty Name="service_term" ColumnName="service_term" />
+                <ScalarProperty Name="liquidate_value" ColumnName="liquidate_value" />
+                <ScalarProperty Name="inventory_group_id" ColumnName="inventory_group_id" />
+                <ScalarProperty Name="staff_seller" ColumnName="staff_seller" />
+                <ScalarProperty Name="sync_status" ColumnName="sync_status" />
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="term" ColumnName="term" />
+                <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+                <ScalarProperty Name="is_weight" ColumnName="is_weight" />
+                <ScalarProperty Name="plu_code" ColumnName="plu_code" />
+                <ScalarProperty Name="is_web_visible" ColumnName="is_web_visible" />
+                <ScalarProperty Name="is_hidden" ColumnName="is_hidden" />
+                <ScalarProperty Name="amortization_type" ColumnName="amortization_type" />
+                <ScalarProperty Name="fin_amortization_type" ColumnName="fin_amortization_type" />
+                <ScalarProperty Name="amortization" ColumnName="amortization" />
+                <ScalarProperty Name="out_type" ColumnName="out_type" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="rest_quantity" ColumnName="rest_quantity" />
+                <ScalarProperty Name="min_Quantity" ColumnName="min_Quantity" />
+                <ScalarProperty Name="vat_type" ColumnName="vat_type" />
+                <ScalarProperty Name="vat" ColumnName="vat" />
+                <ScalarProperty Name="acc_use" ColumnName="acc_use" />
+                <ScalarProperty Name="partnumber" ColumnName="partnumber" />
+                <ScalarProperty Name="country_id" ColumnName="country_id" />
+                <ScalarProperty Name="excise_amount" ColumnName="excise_amount" />
+                <ScalarProperty Name="excise" ColumnName="excise" />
+                <ScalarProperty Name="volume" ColumnName="volume" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="default_unit_id" ColumnName="default_unit_id" />
+                <ScalarProperty Name="report_unit_id" ColumnName="report_unit_id" />
+                <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="group_id" ColumnName="group_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CRMIncidents">
+            <EntityTypeMapping TypeName="ipm11_2011_62Model.CRMIncidents">
+              <MappingFragment StoreEntitySet="CRMIncidents">
+                <ScalarProperty Name="contact_id" ColumnName="contact_id" />
+                <ScalarProperty Name="progres_percent" ColumnName="progres_percent" />
+                <ScalarProperty Name="status_comment" ColumnName="status_comment" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="incident_type" ColumnName="incident_type" />
+                <ScalarProperty Name="priority" ColumnName="priority" />
+                <ScalarProperty Name="end_date" ColumnName="end_date" />
+                <ScalarProperty Name="estimate_date" ColumnName="estimate_date" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="general_id" ColumnName="general_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GeneralDocs">
+            <EntityTypeMapping TypeName="ipm11_2011_62Model.GeneralDocs">
+              <MappingFragment StoreEntitySet="GeneralDocs">
+                <ScalarProperty Name="house_id" ColumnName="house_id" />
+                <ScalarProperty Name="create_date" ColumnName="create_date" />
+                <ScalarProperty Name="delete_date" ColumnName="delete_date" />
+                <ScalarProperty Name="delete_user_id" ColumnName="delete_user_id" />
+                <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
+                <ScalarProperty Name="is_packed" ColumnName="is_packed" />
+                <ScalarProperty Name="is_blocked" ColumnName="is_blocked" />
+                <ScalarProperty Name="contragent_id" ColumnName="contragent_id" />
+                <ScalarProperty Name="contragent_sub_id" ColumnName="contragent_sub_id" />
+                <ScalarProperty Name="amount2" ColumnName="amount2" />
+                <ScalarProperty Name="analytic_code" ColumnName="analytic_code" />
+                <ScalarProperty Name="store_id" ColumnName="store_id" />
+                <ScalarProperty Name="waybill_num" ColumnName="waybill_num" />
+                <ScalarProperty Name="sync_status" ColumnName="sync_status" />
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="project_id" ColumnName="project_id" />
+                <ScalarProperty Name="make_entry" ColumnName="make_entry" />
+                <ScalarProperty Name="status_id" ColumnName="status_id" />
+                <ScalarProperty Name="param_id2" ColumnName="param_id2" />
+                <ScalarProperty Name="param_id1" ColumnName="param_id1" />
+                <ScalarProperty Name="ref_id" ColumnName="ref_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="vat" ColumnName="vat" />
+                <ScalarProperty Name="rate" ColumnName="rate" />
+                <ScalarProperty Name="currency_id" ColumnName="currency_id" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="purpose" ColumnName="purpose" />
+                <ScalarProperty Name="doc_type" ColumnName="doc_type" />
+                <ScalarProperty Name="doc_num_prefix" ColumnName="doc_num_prefix" />
+                <ScalarProperty Name="doc_num" ColumnName="doc_num" />
+                <ScalarProperty Name="tdate" ColumnName="tdate" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductsFlow">
+            <EntityTypeMapping TypeName="ipm11_2011_62Model.ProductsFlow">
+              <MappingFragment StoreEntitySet="ProductsFlow">
+                <ScalarProperty Name="excise" ColumnName="excise" />
+                <ScalarProperty Name="ref_uid" ColumnName="ref_uid" />
+                <ScalarProperty Name="cafe_send_date" ColumnName="cafe_send_date" />
+                <ScalarProperty Name="cafe_comment" ColumnName="cafe_comment" />
+                <ScalarProperty Name="product_bonus" ColumnName="product_bonus" />
+                <ScalarProperty Name="staff_salary" ColumnName="staff_salary" />
+                <ScalarProperty Name="service_staff_id" ColumnName="service_staff_id" />
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="service_product_id" ColumnName="service_product_id" />
+                <ScalarProperty Name="sub_id" ColumnName="sub_id" />
+                <ScalarProperty Name="out_id" ColumnName="out_id" />
+                <ScalarProperty Name="cafe_status" ColumnName="cafe_status" />
+                <ScalarProperty Name="vendor_id" ColumnName="vendor_id" />
+                <ScalarProperty Name="in_id" ColumnName="in_id" />
+                <ScalarProperty Name="original_price" ColumnName="original_price" />
+                <ScalarProperty Name="discount_value" ColumnName="discount_value" />
+                <ScalarProperty Name="discount_percent" ColumnName="discount_percent" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+                <ScalarProperty Name="ref_id" ColumnName="ref_id" />
+                <ScalarProperty Name="parent_product_id" ColumnName="parent_product_id" />
+                <ScalarProperty Name="visible" ColumnName="visible" />
+                <ScalarProperty Name="is_move" ColumnName="is_move" />
+                <ScalarProperty Name="is_expense" ColumnName="is_expense" />
+                <ScalarProperty Name="is_order" ColumnName="is_order" />
+                <ScalarProperty Name="coeff" ColumnName="coeff" />
+                <ScalarProperty Name="self_cost" ColumnName="self_cost" />
+                <ScalarProperty Name="vat_percent" ColumnName="vat_percent" />
+                <ScalarProperty Name="store_id" ColumnName="store_id" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="general_id" ColumnName="general_id" />
+                <ScalarProperty Name="product_tree_path" ColumnName="product_tree_path" />
+                <ScalarProperty Name="product_id" ColumnName="product_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

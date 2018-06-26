@@ -1,0 +1,102 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html ng-app="privateCabinet">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FINA | პირადი სივრცე</title>
+
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/ui-bootstrap-tpls-0.13.1.min.js"></script>
+    <link href="~/Content/hint.min.css" rel="stylesheet" />
+    <link href="~/Content/styles.css" rel="stylesheet" />
+    <link href="~/Content/angular-grid.css" rel="stylesheet" />
+    <script src="~/Scripts/angular-grid.js"></script>
+    <link href="~/Content/theme-fresh.css" rel="stylesheet" />
+    <link href="~/Content/jquery.clear.input.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.clear.input.js"></script>
+    <script src="~/Scripts/app.js"></script>
+</head>
+<body ng-controller="generalController">         
+    <nav class="navbar navbar-fixed-top topFixedNavbar topFixedNavbarShadow">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="http://localhost:2086/Home/Index" style="margin-top: -10px;"><img src="../../Content/Resources/fina_logo_white.png" height="40" /></a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li class="phone">(+995 32) 219-70-00</li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right rightNavbar">
+                        <li class="contragentInfo">{{contragentName}}</li>
+                        <li class="logoutImage hint--right" data-hint="გასვლა" ng-click="LogoutContragent()"><img src="../../Content/Resources/logout.png" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row" style="float: left;">
+                    <div class="col-md-6" style="margin-right: -15px;">
+                        <div class="tile-2" ng-click="RedirectToRequests()">
+                            <div class="tile-2-content">
+                                <img src="../../Content/Resources/requests.png" /> მოთხოვნები
+                            </div>
+                        </div>
+                        <div class="tile-5">
+                            <div class="tile-5-content">
+                                <img src="../../Content/Resources/balances.png" /> ბალანსი
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="tile-1" ng-click="RedirectToLicenses()">
+                            <div class="tile-1-content">
+                                <img src="../../Content/Resources/licenses.png" /> ლიცენზიები
+                            </div>
+                        </div>
+                        <div class="tile-6" ng-click="RedirectToNews()">
+                            <div class="tile-6-content">
+                                <img src="../../Content/Resources/news.png" /> სიახლეები
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="tile-3" ng-click="RedirectToInvoices()">
+                            <div class="tile-3-content">
+                                <img src="../../Content/Resources/invoices.png" /> ინვოისები
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row" style="float: right;">
+                    <div class="col-md-12">
+                        <div class="tile-4">
+                            <div class="tile-4-content">
+                                <img src="../../Content/Resources/agreements.png" /> ხელშეკრულებები
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="container-fluid pageFooter">
+        <div class="container">
+            <span style="float: right;">&copy;2011-@DateTime.Now.Year FINA Ltd</span>
+        </div>
+    </div>
+</body>
+</html>
